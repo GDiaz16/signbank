@@ -12,7 +12,7 @@ try:
     # settings_secret.py is imported in this settings file, you should put the sensitive information in that file.
     from signbank.settings.settings_secret import *
 except ImportError:
-    print('Unable to import settings_secret.py. Create one from settings_secret.py.template.', file=sys.stderr)
+    print('Unable to import settings_secret.py. Create one from settings_secret.py.', file=sys.stderr)
     # Unable to import SECRET_KEY from settings_secret.
     SECRET_KEY = 'INSERT_$$$$_YOUR_%%%%_SECRET_@@@@_KEY_%%%%%%_HERE'
 

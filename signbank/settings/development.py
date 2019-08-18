@@ -12,12 +12,12 @@ DEBUG = True
 
 #: A list of directories where Django looks for translation files.
 LOCALE_PATHS = (
-    os.path.join(PROJECT_DIR, 'locale'),
+    os.path.join(PROJECT_DIR, 'E:/Universidad/Codigo/SignBank/FinSL-signbank/locale'),
 )
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'E:/Universidad/Codigo/SignBank/FinSL-signbank/signbank/static')
 # This setting defines the additional locations the staticfiles app will traverse if the FileSystemFinder finder
 # is enabled, e.g. if you use the collectstatic or findstatic management command or use the static file serving view.
 STATICFILES_DIRS = (
@@ -67,7 +67,7 @@ LOGGING = {
 DO_LOGGING = True
 LOG_FILENAME = 'debug.log'
 
-if DEBUG:
+"""if DEBUG:
     try:
         import debug_toolbar
         # Setting up debug toolbar.
@@ -75,4 +75,4 @@ if DEBUG:
         INSTALLED_APPS += ('debug_toolbar',)
         DEBUG_TOOLBAR_CONFIG = {'RESULTS_CACHE_SIZE': 100}
     except ImportError:
-        pass
+        pass"""

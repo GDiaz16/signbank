@@ -8,25 +8,26 @@ from signbank.settings.base import *
 # SECRET_KEY, ADMINS, DATABASES, EMAIL_HOST, EMAIL_PORT, DEFAULT_FROM_EMAIL
 
 #: IMPORTANT: Debug should always be False in production
-DEBUG = False
+DEBUG = True
 
 #: IMPORTANT: The hostname that this signbank runs on, this prevents HTTP Host header attacks
 ALLOWED_HOSTS = ['signbank.csc.fi']
 
 # A list of directories where Django looks for translation files.
 LOCALE_PATHS = (
-    'E:/Universidad/Codigo/SignBank/FinSL-signbank/locale',
+    os.path.join(os.path.dirname(BASE_DIR),"locale"),
 )
 
 #: The absolute path to the directory where collectstatic will collect static files for deployment.
 #: Example: "/var/www/example.com/static/"
-STATIC_ROOT = 'E:/Universidad/Codigo/SignBank/FinSL-signbank/signbank/static'
+STATIC_ROOT = ""
+
 # This setting defines the additional locations the staticfiles app will traverse if the FileSystemFinder finder
 # is enabled, e.g. if you use the collectstatic or findstatic management command or use the static file serving view.
-STATICFILES_DIRS = (
-    os.path.join(PROJECT_DIR, "signbank", "static"),
-)
+STATICFILES_DIRS = ["E:/Universidad/Codigo/SignBank/FinSL-signbank/signbank/static",
+]
 
+WSGI_FILE= 'E:/Universidad/Codigo/SignBank/FinSL-signbank/signbank/wsgi.py'
 #: Use Local-memory caching for specific views (if you have bigger needs, use something else).
 CACHES = {
     'default': {

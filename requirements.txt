@@ -9,3 +9,4 @@ django-registration==2.4.1
 django-contrib-comments==1.9.0
 django-guardian==1.4.9
 django-notifications-hq==1.4
+psycopg2

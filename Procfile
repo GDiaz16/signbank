@@ -1,0 +1,1 @@
+web: python bin/develop.py runserver

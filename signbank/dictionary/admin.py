@@ -253,6 +253,7 @@ admin.site.register(Dataset, DatasetAdmin)
 admin.site.register(GlossRelation, GlossRelationAdmin)
 admin.site.register(AllowedTags, AllowedTagsAdmin)
 
+
 # The following models have been removed from the admin because they are not used at the moment.
-# admin.site.register(FieldChoice, FieldChoiceAdmin)
-# admin.site.register(MorphologyDefinition)
+admin.site.register(FieldChoice, FieldChoiceAdmin)
+#admin.site.register(MorphologyDefinition)

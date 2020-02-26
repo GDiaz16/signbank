@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 #: Make this unique, and don't share it with anybody. This is used to provide cryptographic signing.
+import os
+
 SECRET_KEY = 'mypassword'
 
 #: A list of all the people who get code error notifications. When DEBUG=False and a view raises an exception,
@@ -16,14 +18,23 @@ SERVER_EMAIL='root@localhost'
 #: A dictionary containing the settings for all databases to be used with Django.
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd1d80vnskhqkfg',
-        'USER': 'lgjpochisercgs',
-        'PASSWORD': '5c0e2e21c153ce914ec46c6635d173f0d375b68999f543cecfc95099b1c58e40',
-        'HOST': 'ec2-3-215-41-107.compute-1.amazonaws.com',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'findatabase',
+        'USER': 'gonzalo',
+        'PASSWORD': 'a',
         'PORT': '5432',
     }
 }
+
+ALLOWED_HOSTS = ['django-test-269220.appspot.com']
+
+#Para google cloud
+DATABASES['default']['HOST'] = '/cloudsql/django-test-269220:us-central1:findb'
+if os.getenv('GAE_INSTANCE'):
+    pass
+else:
+    DATABASES['default']['HOST'] = '127.0.0.1'
+
 
 #: Is the database engine used postgresql?
 DB_IS_PSQL = 'postgresql' in DATABASES['default']['ENGINE']

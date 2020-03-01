@@ -25,7 +25,7 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_collect")
 #STATICFILES_DIRS = ["/media/gonzalo/ARCHIVOS/Universidad/Codigo/SignBank/FinSL-signbank/signbank/static",
 #]
 
-STATICFILES_DIRS = [os.path.join(PROJECT_DIR, "signbank\static"),
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "signbank\static"),
 ]
 # Set up a dummy cache for development, it doesn't actually cache anything.
 CACHES = {

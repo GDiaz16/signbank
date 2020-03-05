@@ -52,8 +52,8 @@ LANGUAGES = (
 )
 
 # URL to use when referring to static files located in STATIC_ROOT.
-# Example: "/static/" or "http://static.example.com/"
-STATIC_URL = 'https://storage.googleapis.com/findb-bucket/static/'
+STATIC_URL = '/static/'#'https://storage.googleapis.com/findb-bucket/static/'
+
 #: The list of finder backends that know how to find static files in various locations.
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',

@@ -4,7 +4,7 @@ handlers:
 # This configures Google App Engine to serve the files in the app's
 # static directory.
 - url: /signbank/static
-  static_dir: static/
+  static_dir: static_collect/
 # This handler routes all requests not caught above to the main app.
 # It is required when static routes are defined, but can be omitted
 # (along with the entire handlers section) when there are no static
@@ -13,7 +13,8 @@ handlers:
   script: auto
 # [END django_app]
 resources:
-  memory_gb: 4
+  memory_gb: 4gonzalo1024
+  
 
 beta_settings:
     cloud_sql_instances: django-test-269220:us-central1:findb

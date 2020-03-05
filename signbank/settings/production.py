@@ -20,14 +20,14 @@ LOCALE_PATHS = (
 
 #: The absolute path to the directory where collectstatic will collect static files for deployment.
 #: Example: "/var/www/example.com/static/"
-STATIC_ROOT = ""
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_collect")
 
 # This setting defines the additional locations the staticfiles app will traverse if the FileSystemFinder finder
 # is enabled, e.g. if you use the collectstatic or findstatic management command or use the static file serving view.
 STATICFILES_DIRS = ["E:/Universidad/Codigo/SignBank/FinSL-signbank/signbank/static",
 ]
 
-WSGI_FILE= 'E:/Universidad/Codigo/SignBank/FinSL-signbank/signbank/wsgi.py'
+WSGI_FILE = 'E:/Universidad/Codigo/SignBank/FinSL-signbank/signbank/wsgi.py'
 #: Use Local-memory caching for specific views (if you have bigger needs, use something else).
 CACHES = {
     'default': {

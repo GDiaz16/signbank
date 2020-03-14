@@ -13,8 +13,8 @@ handlers:
   script: auto
 # [END django_app]
 resources:
-  memory_gb: 4gonzalo1024
-  
+  memory_gb: 4
+
 
 beta_settings:
     cloud_sql_instances: django-test-269220:us-central1:findb

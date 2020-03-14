@@ -11,7 +11,7 @@ from signbank.settings.base import *
 DEBUG = True
 
 #: IMPORTANT: The hostname that this signbank runs on, this prevents HTTP Host header attacks
-ALLOWED_HOSTS = ['django-test-269220.appspot.com']
+ALLOWED_HOSTS = ['django-test-269220.appspot.com', '127.0.0.1']
 
 # A list of directories where Django looks for translation files.
 LOCALE_PATHS = (

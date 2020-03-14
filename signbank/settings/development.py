@@ -8,9 +8,9 @@ from signbank.settings.base import *
 # SECRET_KEY, ADMINS, DATABASES, EMAIL_HOST, EMAIL_PORT, DEFAULT_FROM_EMAIL
 
 #: Debug should be True in development but not in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['django-test-269220.appspot.com']
+ALLOWED_HOSTS = ['django-test-269220.appspot.com', '127.0.0.1']
 
 #: A list of directories where Django looks for translation files.
 LOCALE_PATHS = (
@@ -20,12 +20,14 @@ LOCALE_PATHS = (
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 # Example: "/var/www/example.com/static/"
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_collect")
+
+
 # This setting defines the additional locations the staticfiles app will traverse if the FileSystemFinder finder
 # is enabled, e.g. if you use the collectstatic or findstatic management command or use the static file serving view.
 #STATICFILES_DIRS = ["/media/gonzalo/ARCHIVOS/Universidad/Codigo/SignBank/FinSL-signbank/signbank/static",
 #]
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "signbank\static"),
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),
 ]
 # Set up a dummy cache for development, it doesn't actually cache anything.
 CACHES = {
